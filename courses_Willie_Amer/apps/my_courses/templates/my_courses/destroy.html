@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Destroy!</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+</head>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Are you sure you want to delete:</h2>
+      <p>Course Name: {{courses.course_name}}</p>
+      <p>Description: {{courses.description}}</p>
+      <form action="/delete_course" method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="id" value='{{courses.id}}'>
+        <input type="submit" name="delete" class='waves-effect waves-light btn'value="Yes, Delete">
+        <button type="button" class='btn-floating btn-large waves-effect waves-light red' name="button"><a href="/">No</a></button>
+      </form>
+      </div>
+  </body>
+</html>
