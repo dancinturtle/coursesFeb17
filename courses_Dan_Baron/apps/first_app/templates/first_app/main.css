@@ -1,0 +1,20 @@
+* {
+    background-color: pink;
+}
+
+.add_course {
+    text-align: left;
+}
+
+.btn {
+    text-align: right;
+}
+
+input[type="submit"] {
+    background-color: green;
+    color: white;
+}
+
+form {
+    text-align: left;
+}
